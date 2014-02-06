@@ -7,18 +7,25 @@ class ReviewsController < ApplicationController
   end
   def new
     @review = Review.new
-
+    @reviewee_id = params[:id]
+    # binding.pry
   end
   def create
-    new_review = Review.create
-    new_review=params.require(:review).permit( :review_text, :score, :author_id, :reviewer_id)
-    @reviewee_id=current_user.id
+    # binding.pry
+    # new_review = Review.create
+    new_review=params.require(:review).permit( :review_text, :score, :reviewee_id)
+    review = Review.create(new_review)
+    # binding.pry 
+    review.update_attributes(author_id: current_user.id)
+    # binding.pry
     render :show
   end
   
   def show
-    id = params.require(:id)
-    @review = Review.find(id)
+    # binding.pry
+    @review = Review.find(params[:id])
+    # @review.update_attributes(params[:review])
+    render :show
     
   end
 

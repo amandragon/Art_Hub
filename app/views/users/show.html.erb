@@ -41,4 +41,6 @@
   </aside>
 </div><br>
 
-<a href="<%= new_review_path%>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
+<a href="<%= new_review_path(:id => @user.id) %>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
+
+

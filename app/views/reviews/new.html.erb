@@ -22,7 +22,7 @@
       <%= f.label :score %>
       <%= f.text_field :score %><br>
 
-      
+      <%= f.hidden_field :reviewee_id, :value => @reviewee_id %>      
 
       <p>Review is being uploaded by <%=@current_user.name%></p>
 
