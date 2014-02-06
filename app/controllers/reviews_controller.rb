@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
   end
   def create
     new_review = Review.create
-    new_review=params.require(:review).permit(:review_text, :score, :author_id, :reviewer_id)
+    new_review=params.require(:review).permit( :review_text, :score, :author_id, :reviewer_id)
     @reviewee_id=current_user.id
     render :show
   end

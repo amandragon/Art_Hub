@@ -2,11 +2,13 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h3>Name: <%= @user.name %></h3><br>
-      <h3>Email: <%= @user.email %></h3><br>
+      <h2><%= @user.name %>'s Page</h2><br>
 
+      <h3>Email:</h3>
+      <p><%= @user.email %></p><br>
+
+      <div class="reviews_by_user">
       <h3>Reviews by this user: </h3>
-
       <% @reviews_by_user.each do |review| %>
   <div class="row">
      <div class="span3 offset1">
@@ -16,6 +18,7 @@
     </div>
   </div>
 <% end %>
+</div>
 
 
 

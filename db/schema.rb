@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204045604) do
+ActiveRecord::Schema.define(version: 20140206221453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "add_name_to_reviews", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", force: true do |t|
     t.integer  "author_id"
@@ -27,6 +33,13 @@ ActiveRecord::Schema.define(version: 20140204045604) do
 
   add_index "reviews", ["author_id"], name: "index_reviews_on_author_id", using: :btree
   add_index "reviews", ["reviewee_id"], name: "index_reviews_on_reviewee_id", using: :btree
+
+  create_table "updates", force: true do |t|
+    t.string   "AddNameToReviews"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

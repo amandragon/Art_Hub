@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AddNameToReviews: MyString
+  name: MyString
+
+two:
+  AddNameToReviews: MyString
+  name: MyString
