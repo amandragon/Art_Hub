@@ -2,13 +2,40 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h3>Name: <%= @user.name %></h3>
-      <h3>Email: <%= @user.email %></h3>
+      <h3>Name: <%= @user.name %></h3><br>
+      <h3>Email: <%= @user.email %></h3><br>
 
-      <h3>Reviews by this user: <%= Review.all_reviews_for @user%></h3>
-      <h3>Reviews of this user: <%= @reviews_for_user.each%></h3
+      <h3>Reviews by this user: </h3>
+
+      <% @reviews_by_user.each do |review| %>
+  <div class="row">
+     <div class="span3 offset1">
+     	<ul>
+     	<li><%=review.review_text%></li>
+     </ul>
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
+      <h3>Reviews of this user: </h3>
+
+       <% @reviews_for_user.each do |review| %>
+  <div class="row">
+     <div class="span3 offset1">
+     	<ul>
+     	<li><%=review.review_text%></li>
+     </ul>
+    </div>
+  </div>
+<% end %>
+
+
     </section>
   </aside>
-</div>
+</div><br>
 
 <a href="<%= new_review_path%>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
