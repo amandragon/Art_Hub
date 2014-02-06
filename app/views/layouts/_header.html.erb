@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/users/index">My Profile</a></li>
+          <li><%= link_to "Sign in", signin_path, method: "get"%></li>
+          <li><%= link_to "Sign up", signup_path, method: "get"%></li>
+        <li><%= link_to "Sign out", signout_path, method: "delete"%></li>
+            <li><%= link_to "View Users", users_path, method: "get"%></li>
+              <li><%= link_to "View Reviews", reviews_path, method: "get"%></li>
+
+
+        
+      </ul>
+
+  </div><!-- /.container-fluid -->
+</nav>

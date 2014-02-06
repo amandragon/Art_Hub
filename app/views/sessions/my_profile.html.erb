@@ -1,0 +1,11 @@
+<%= render :partial => 'layouts/header' %>
+
+<h2>Your Profile</h2>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h3>Name: <%= @current_user.name %></h3>
+      <h3>Email: <%= @current_user.email %></h3>
+    </section>
+  </aside>
+</div>

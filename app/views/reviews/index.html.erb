@@ -1,0 +1,11 @@
+<%= render :partial => 'layouts/header' %>
+
+<h2>List of the current reviews</h2>
+
+<ul>
+  <% @reviews.each do |r| %>
+    <li>
+      <%= link_to r.review_text, review_path(r) %>
+    </li>
+  <% end %>
+</ul> 

@@ -1,0 +1,14 @@
+<%= render :partial => 'layouts/header' %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h3>Name: <%= @user.name %></h3>
+      <h3>Email: <%= @user.email %></h3>
+
+      <h3>Reviews by this user: <%= Review.all_reviews_for @user%></h3>
+      <h3>Reviews of this user: <%= @reviews_for_user.each%></h3
+    </section>
+  </aside>
+</div>
+
+<a href="<%= new_review_path%>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
