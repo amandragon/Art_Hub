@@ -13,14 +13,12 @@
   <div class="row">
      <div class="span3 offset1">
      	<ul>
-     	<li><%=review.review_text%></li>
+     	<li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
      </ul>
     </div>
   </div>
 <% end %>
 </div>
-
-
 
 
 
@@ -30,7 +28,7 @@
   <div class="row">
      <div class="span3 offset1">
      	<ul>
-     	<li><%=review.review_text%></li>
+     	<li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
      </ul>
     </div>
   </div>
