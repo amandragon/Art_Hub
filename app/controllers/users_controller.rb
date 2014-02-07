@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Welcome to ArtHub!"
       sign_in @user
-      redirect_to user
+      redirect_to current_user
     else
       render'new'
     end
