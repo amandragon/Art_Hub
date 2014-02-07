@@ -1,2 +1,18 @@
 .reviews_by_user {
 }
+
+.show {
+	padding-left: 10px;
+}
+
+.show_header {
+	text-align: center;
+}
+
+.show_button {
+	padding: 40px;
+}
+
+.index {
+	padding-left: 10px;
+}

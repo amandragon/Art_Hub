@@ -1,8 +1,13 @@
 <%= render :partial => 'layouts/header' %>
+
 <div class="row">
   <aside class="span4">
     <section>
+      <div class="show_header">
       <h2><%= @user.name %>'s Page</h2><br>
+    </div>
+
+    <div class="show">
 
       <h3>Email:</h3>
       <p><%= @user.email %></p><br>
@@ -33,12 +38,15 @@
     </div>
   </div>
 <% end %>
-
-
     </section>
   </aside>
 </div><br>
 
+</div>
+
+<div class="show_button">
+
 <a href="<%= new_review_path(:id => @user.id) %>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
 
+</div>
 

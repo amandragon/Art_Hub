@@ -1,9 +1,10 @@
 <%= render :partial => 'layouts/header' %>
 
-	<div class="review"
+	<div class="review">
+	<h3><%= @review.title %></h3><br>
+
      <div class="col-md-3">
-     	 <p class="text-info">Title: <%= @review.title %></p><br>
-      <p class="text-info">Review: <%= @review.review_text %></p><br>
+      <p class="text-info"><%= @review.review_text %></p><br>
       <p class="text-info">Score: <%= @review.score %></p><br>
 </div>
 
