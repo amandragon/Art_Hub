@@ -2,10 +2,14 @@
 
 <h3>List of the recent reviews</h3>
 
-<ul>
-  <% @reviews.each do |r| %>
-    <li>
-      <%= link_to r.review_text, review_path(r) %>
-    </li>
-  <% end %>
-</ul> 
+<% @reviews.each do |review| %>
+  <div class="row">
+     <div class="span3 offset1">
+     	<ul>
+     	<li><a href="<%=review_path(review)%>">Review for <%=review.reviewee_id%> by <%=review.author_id%></a></li>
+
+     </ul>
+
+</div>
+  </div>
+<% end %>

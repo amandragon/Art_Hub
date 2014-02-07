@@ -6,7 +6,7 @@
         <div id="brand"><li><h1>ArtHub</h1></li>
 
         </div>
-          <li><a href="/users/index">My Profile</a></li>
+          <li><%= link_to "My Profile", current_user %></li>
           <li><%= link_to "Sign in", signin_path, method: "get"%></li>
           <li><%= link_to "Sign up", signup_path, method: "get"%></li>
         <li><%= link_to "Sign out", signout_path, method: "delete"%></li>
