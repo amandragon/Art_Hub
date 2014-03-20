@@ -1,28 +1,31 @@
-== README
+== ArtHub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ArtHub is a social media tool for amateur writers to post their work and review other writers.
+There will be a scoring system that weights the reviewers review by their qualifications (based on their own ArtHub score). This app will more accurately judge writers and give them a score to present when searching for writing jobs, publishers, or agents.
 
-Things you may want to cover:
+Milestones
 
-* Ruby version
+* Refactor model relationships
 
-* System dependencies
+* Allow a user to post work and review/score others' work.
 
-* Configuration
+* Create a scoring system of a post based on the average review score. Weight this score based on the qualifications of the reviewer in three tiers.
 
-* Database creation
+* Votes will use JS.
 
-* Database initialization
+* Average the writers post scores into the user's overall score.
 
-* How to run the test suite
+* Sign-in using LinkedIn. User can upload their picture from the API.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Put the user's posts, reviews, score, and bio on the same user profile.
 
-* Deployment instructions
-
-* ...
+* TDD
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Nice to Haves:
+
+* Create a post index page of the top 10 posts of the week based on the scores given by the reviewers.
+
+* Notify users via email using Action Mailer when someone reviews their work.
+
+* Use Amazon Books API to link to any published work of a user (if they have any.)
