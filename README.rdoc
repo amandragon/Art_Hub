@@ -33,7 +33,6 @@ Nice to Haves:
 
 Gems So Far:
 
-* bootstrap
 
 
 APIs So Far:
