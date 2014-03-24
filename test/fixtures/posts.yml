@@ -2,14 +2,12 @@
 
 one:
   user_id: 
-  reviews: 
   author: MyString
   title: MyString
   text: MyString
 
 two:
   user_id: 
-  reviews: 
   author: MyString
   title: MyString
   text: MyString
