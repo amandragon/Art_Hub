@@ -13,19 +13,32 @@
       <p><%= @user.email %></p><br>
 
 
-<h3>Work by this user </h3>
-<%= debug @posts_by_user %>
- <% @posts_by_user.each do |post| %>
-   <div class="row">
-     <div class="span3 offset1">
-      <ul>
-      <li><a href="<%=post_path(post)%>"><%=post.title%></a></li>
-     </ul>
-    </div>
-  </div>
-<% end %>
-    </section>
-  </aside>
-</div><br>
+  <h3>Work by this user </h3>
+    <% @posts_by_user.each do |post| %>
+      <div class="row">
+        <div class="span3 offset1">
+          <ul>
+            <li><a href="<%=post_path(post)%>"><%=post.title%></a></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+        </section>
+      </aside>
+      </div>
+
+  <h3>Reviews by this user </h3>
+    <% @reviews_by_user.each do |review| %>
+      <div class="row">
+        <div class="span3 offset1">
+          <ul>
+            <li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+        </section>
+      </aside>
+      </div>
 
 </div>
