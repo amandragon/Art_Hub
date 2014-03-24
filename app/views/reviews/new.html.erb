@@ -3,39 +3,21 @@
 <div class="index">
 
 <!-- want to make this a JS partial with an ajax call -->
-<h3>Create a New Review</h3>
 
-<div class="row">
-  <div class="span15 offset3">
-    <%= form_for(@review) do |f| %>
-      <% unless @review.errors.count == 0   %>
-        <div class="alert alert-error">
-          The form contains <%= pluralize(@review.errors.count, "error") %>.
-        </div>
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-          <li>* <%= msg %></li>
-        <% end %>
-        </ul>
-      <% end %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title %>
 
-      <%= f.label :text %>
-      <%= f.text_area :text %>
+    <head>
+      <title>Result</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <script type='text/javascript' src='script.js'></script>
+  </head>
+  <body>
+        <form>
+        MESSAGE: <input type="text" name="message" value="Type your text here!">
+        </form>
+        <button>Add!</button><br/>
+        <div id="messages"></div>
+  </body>
 
-      <%= f.label :score %>
-      <%= f.text_field :score %><br>
-
-      <%= f.hidden_field :post_id, :value => @post.id %>  
-      <%= f.hidden_field :user_id, :value => @current_user.id %>      
-
-      <p>Review is being uploaded by <%=@current_user.name%></p>
-
-      <%= f.submit "Post review", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
-</div>
 
 </div>
