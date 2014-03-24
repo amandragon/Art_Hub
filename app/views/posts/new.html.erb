@@ -24,7 +24,7 @@
       <%= f.label :text %>
       <%= f.text_field :text %><br>
 
-      <%= f.hidden_field :user_id, :value => @user_id %>  
+      <%= f.hidden_field :user_id, :value => @current_user.id %>  
       <%= f.hidden_field :weight_score, :value=> [] %>    
 
       <%= f.submit "Create", class: "btn btn-large btn-primary" %>
