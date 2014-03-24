@@ -3,6 +3,9 @@ ArtApp::Application.routes.draw do
 
   root to: 'users#index'
 
+  # get '/posts/:id/reviews/new', to: 'reviews#new'
+  # how do I carry over the posts ID to the reviews?
+
   get '/signup', to: 'users#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   get'/signin' => 'sessions#new'
