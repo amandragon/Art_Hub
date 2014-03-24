@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.string :remember_token
-      t.string :av_score
+      t.integer :av_score
 
       t.timestamps
     end

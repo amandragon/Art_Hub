@@ -12,20 +12,9 @@
       <h3>Email:</h3>
       <p><%= @user.email %></p><br>
 
-      <div class="reviews_by_user">
-      <h3>Reviews by this user: </h3>
-      <% @reviews_by_user.each do |review| %>
-  <div class="row">
-     <div class="span3 offset1">
-     	<ul>
-     	<li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
-     </ul>
-    </div>
-  </div>
-<% end %>
-</div>
 
 <h3>Work by this user </h3>
+<%= debug @posts_by_user %>
  <% @posts_by_user.each do |post| %>
    <div class="row">
      <div class="span3 offset1">

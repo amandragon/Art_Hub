@@ -17,20 +17,20 @@ ActiveRecord::Schema.define(version: 20140324190329) do
   enable_extension "plpgsql"
 
   create_table "posts", force: true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "title"
     t.string   "text"
-    t.string   "weight_score"
+    t.integer  "weight_score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "reviews", force: true do |t|
-    t.string   "post_id"
+    t.integer  "post_id"
     t.string   "title"
     t.string   "text"
-    t.string   "score"
-    t.string   "user_id"
+    t.integer  "score"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140324190329) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.string   "av_score"
+    t.integer  "av_score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

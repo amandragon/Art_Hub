@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    new_post=params.require(:post).permit( :title, :author, :text, :user_id)
+    new_post=params.require(:post).permit( :title, :text, :user_id, :score)
     @post = Post.create(new_post)
     render :show
   end
@@ -18,6 +18,10 @@ class PostsController < ApplicationController
   def show
     @post= Post.find(params[:id])
     render :show
+  end
+
+  def score_post
+
   end
 
   def destroy

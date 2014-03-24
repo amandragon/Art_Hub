@@ -1,39 +1,16 @@
 Review.delete_all
 User.delete_all
+Post.delete_all
 
-u1 = User.create(:name=>'Diane Shen', :email=>'ds@gmail.com', password: "foobar", password_confirmation: "foobar")
+u1 = User.create(:id=>1, :name=>'Diane Shen', :email=>'ds@gmail.com', :password=> "foobar", :password_confirmation=> "foobar")
+u2 = User.create(:id=>2, :name => 'Markus',  :email=> "mguehrs@gmail.com", :password=> "foobar", :password_confirmation=> "foobar")
 
-u2 = User.create(:name => 'Markus',  email: "mguehrs@gmail.com", password: "foobar", password_confirmation: "foobar")
+p1 = Post.create(:id=>1, :user_id=>1, :title=>"This is a post", :text=>"This is a wonderful post that I wrote. Wow. Such post.")
+p2 = Post.create(:id=>2, :user_id=>1, :title=>"This is my second post", :text=>"What a wonderful second post this is.")
+p3 = Post.create(:id=>3, :user_id=>2, :title=>"This is the second user's post", :text=>"Lalala post!")
 
-# u2 = User.create(:name=>'Zoe Edmonds', :email=>'tze@yahoo.com')
-# u3 = User.create(:name=>'Walker Guffey', :email=>'walker@gmail.com')
-# u4 = User.create(:name=>'Max Egan', :email=>'max@sdfg.com')
-# u5 = User.create(:name=>'Aditi Vasan', :email=>'aditi@werty.com')
+r1 = Review.create(:post_id=>1, :user_id=>2, :title=> "What a great post", :text=>"Wonderful post", :score=>80)
+r2 = Review.create(:post_id=>2, :user_id=>2, :title=>"This is a very good post as well", text:"Love the post", :score=>88)
+r3 = Review.create(:post_id=>1, :user_id=>2, :title=>"Post review", :text=>"dkfjfgjhgjfhfj", :score=>40)
+r4 = Review.create(:post_id=>3, :user_id=>1, :title=> "dskfjkdgjd", :text=>"sfdghjsdfghjasdfghj", :score=>90)
 
-r1 = Review.create(:review_text=>'Blah blah blah blah blah. I liked it.', :score=>4)
-r1.author = u1
-r1.reviewee = u2
-r1.save
-
-# u1.reviews << r1
-# u1.save
-
-# r2 = Review.create(:review_text=>'This was horrible!', :score=>1)
-# r3 = Review.create(:review_text=>'fhsgjdhkf', :score=>5)
-# r4 = Review.create(:review_text=>'review, review, review', :score=>3)
-
-# u1.reviews = [r1, r2]
-# u3.reviews = [r3]
-# u4.reviews = [r4]
-
-
-
-
-# b1.recipes = [r1, r2]
-# b1.recipes << r3
-
-# r1.ingredients = [i1, i2, i4]
-# r2.ingredients = [i1, i2, i4, i5, i6]
-# r3.ingredients = [i2, i3, i4]
-
-#User.create(:name => 'Markus',  email: "mguehrs@gmail.com", password: "foobar123", password_confirmation: "foobar123")
