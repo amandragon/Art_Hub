@@ -1,0 +1,14 @@
+<%= render :partial => 'layouts/header' %>
+
+  <div class="post">
+  <h3><%= @post.title %></h3><br>
+
+     <div class="col-md-3">
+      <p class="text-info"><%= @post.text %></p><br>
+</div>
+
+<ul class="nav nav-pills">
+  <li><%= link_to('Delete Post', @post, :method => :delete, :confirm => 'Are you sure?') %></li>
+  <li><%= link_to 'Return to Users', users_path %></li>
+</ul>
+</div>

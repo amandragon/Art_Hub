@@ -16,8 +16,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post= Post.find(params[:id])
-    render :show
+    @post = Post.find(params[:id])
+    render :show 
   end
 
   def score_post
