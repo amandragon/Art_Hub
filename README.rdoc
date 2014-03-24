@@ -29,3 +29,14 @@ Nice to Haves:
 * Notify users via email using Action Mailer when someone reviews their work.
 
 * Use Amazon Books API to link to any published work of a user (if they have any.)
+
+
+Gems So Far:
+
+* bootstrap
+
+
+APIs So Far:
+
+
+
