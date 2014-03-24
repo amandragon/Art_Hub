@@ -1,10 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.belongs_to :user, index: true
-      t.string :author
+      t.string :user_id
       t.string :title
       t.string :text
+      t.string :weight_score
 
       t.timestamps
     end

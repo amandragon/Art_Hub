@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  author_id: 
-  reviewee_id: 
-  review_text: MyString
-  score: 1
+  post_id: MyString
+  title: MyString
+  text: MyString
+  score: MyString
+  user_id: MyString
 
 two:
-  author_id: 
-  reviewee_id: 
-  review_text: MyString
-  score: 1
+  post_id: MyString
+  title: MyString
+  text: MyString
+  score: MyString
+  user_id: MyString

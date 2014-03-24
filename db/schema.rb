@@ -11,40 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324174221) do
+ActiveRecord::Schema.define(version: 20140324190329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "posts", force: true do |t|
-    t.integer  "user_id"
-    t.string   "author"
+    t.string   "user_id"
     t.string   "title"
     t.string   "text"
+    t.string   "weight_score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "reviews", force: true do |t|
-    t.integer  "author_id"
-    t.integer  "reviewee_id"
-    t.string   "review_text"
-    t.integer  "score"
+    t.string   "post_id"
+    t.string   "title"
+    t.string   "text"
+    t.string   "score"
+    t.string   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
   end
-
-  add_index "reviews", ["author_id"], name: "index_reviews_on_author_id", using: :btree
-  add_index "reviews", ["reviewee_id"], name: "index_reviews_on_reviewee_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.string   "av_score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -25,15 +25,12 @@
 <% end %>
 </div>
 
-
-
-      <h3>Reviews of this user: </h3>
-
-       <% @reviews_for_user.each do |review| %>
-  <div class="row">
+<h3>Work by this user </h3>
+ <% @posts_by_user.each do |post| %>
+   <div class="row">
      <div class="span3 offset1">
-     	<ul>
-     	<li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
+      <ul>
+      <li><a href="<%=post_path(post)%>"><%=post.title%></a></li>
      </ul>
     </div>
   </div>
@@ -43,10 +40,3 @@
 </div><br>
 
 </div>
-
-<div class="show_button">
-
-<a href="<%= new_review_path(:id => @user.id) %>"class="btn btn-primary btn-lg active" role="button">Review this User</a>
-
-</div>
-

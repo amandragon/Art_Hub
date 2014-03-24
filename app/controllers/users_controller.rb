@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts_by_user = Post.all_posts_by @user
     @reviews_by_user = Review.all_reviews_by @user
-    @reviews_for_user= Review.all_reviews_for @user
   end
 
   def new
