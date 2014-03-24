@@ -10,6 +10,9 @@ class PostsController < ApplicationController
   end
 
   def create
+    new_post=params.require(:post).permit( :title, :author, :text, :user_id)
+    @post = Post.create(new_post)
+    render :show
   end
 
   def show
@@ -18,6 +21,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(params[:id])
+    post.delete
+    redirect_to(posts_path)
   end
 
 end
