@@ -1,5 +1,5 @@
 ArtApp::Application.routes.draw do
-  resources :users, :sessions, :reviews
+  resources :users, :sessions, :reviews, :posts
 
   root to: 'users#index'
 

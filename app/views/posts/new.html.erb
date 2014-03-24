@@ -1,0 +1,35 @@
+<div class="index">
+
+<h3>Create a New Post</h3>
+
+<div class="row">
+  <div class="span15 offset3">
+    <%= form_for(@post) do |f| %>
+      <% unless @post.errors.count == 0   %>
+        <div class="alert alert-error">
+          The form contains <%= pluralize(@post.errors.count, "error") %>.
+        </div>
+        <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li>* <%= msg %></li>
+        <% end %>
+        </ul>
+      <% end %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :author %>
+      <%= f.text_area :author %>
+
+      <%= f.label :text %>
+      <%= f.text_field :text %><br>
+
+      <%= f.hidden_field :user_id, :value => @user_id %>      
+
+      <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+</div>
