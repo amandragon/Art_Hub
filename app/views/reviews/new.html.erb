@@ -1,21 +1,5 @@
-<%= render :partial => 'layouts/header' %>
-
 <div class="index">
 
-    <!-- just any html form -->
-
-    <head>
-      <title>Review This Work</title>
-        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
-        <script type='text/javascript' src='script.js'></script>
-  </head>
-  <body>
-        <form>
-        Review: <input type="text" name= "message" value="Type your text here!">
-        </form>
-        <button>Review!</button><br/>
-        <div id="messages"></div>
-  </body>
 
   <!-- add my real review form -->
 
@@ -50,6 +34,8 @@
     <% end %>
   </div>
 </div>
+
+<%= render :partial => 'reviews/index', locals: {reviews: @reviews} %>
 
 
 </div>

@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @reviewee_id = params[:id]
+    @reviews = Review.all
     # binding.pry
   end
   def create

@@ -7,15 +7,11 @@ $(document).ready(function() {
 
   $('#new_review').on("ajax:success", function(e,data,status, xhr){
     $('#new_review').append(xhr.responseText);
-  }).bind("ajax:error", function(e,data,status, xhr){
+  }).bind("ajax:error", function(e,data,status,3 xhr){
     console.log('Ajax error');
   });
 
-// jquery
-    $('button').click(function() {
-      var toAdd = $("input[name=message]").val();
-        $('#messages').append("<p>"+toAdd+"</p>");
-    });
+
 
 
 
