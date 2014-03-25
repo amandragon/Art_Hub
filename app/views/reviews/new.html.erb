@@ -23,7 +23,7 @@
 
 <div class="row">
   <div class="span15 offset3">
-    <%= form_for(@review) do |f| %>
+    <%= form_for(@review, remote: true) do |f| %>
       <% unless @review.errors.count == 0   %>
         <div class="alert alert-error">
           The form contains <%= pluralize(@review.errors.count, "error") %>.
