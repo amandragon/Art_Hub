@@ -17,6 +17,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+
+  
+    @review = Review.create
+    # binding.pry
+    @reviews = Review.where("post_id = ?", params[:id])
+    # binding.pry
     render :show 
   end
 
