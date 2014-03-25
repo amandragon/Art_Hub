@@ -5,10 +5,14 @@
 <% @reviews.each do |review| %>
   <div class="row">
      <div class="span3 offset1">
-     	<ul>
-     	<li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
+     	<dl>
+     	<dt><%=review.title%> (<%=review.score%>)</dt>
+      <dd><%=review.text%></dd>
 
-     </ul>
+      <!-- style these -->
+
+
+     </dl>
 
 </div>
   </div>
