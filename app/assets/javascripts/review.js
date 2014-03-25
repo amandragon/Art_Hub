@@ -6,8 +6,7 @@ $(document).ready(function() {
   $('#new_review').append('TESTING, that is the form ...');
 
   $('#new_review').on("ajax:success", function(e,data,status, xhr){
-    console.log('Ajax is back');
-    // $('#new_review').append(xhr.responseText);
+    $('#new_review').append(xhr.responseText);
   }).bind("ajax:error", function(e,data,status, xhr){
     console.log('Ajax error');
   });

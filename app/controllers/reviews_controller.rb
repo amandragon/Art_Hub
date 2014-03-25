@@ -15,9 +15,10 @@ class ReviewsController < ApplicationController
     @review = Review.create(new_review)
     @review.update_attributes(user_id: current_user.id)
     
-    respond_to do |format| 
-      format.json { render :json => @post }
-    end  
+    render :json => @review
+    # respond_to do |format| 
+    #   format.json { render :json => @post }
+    # end  
 
   end
   
