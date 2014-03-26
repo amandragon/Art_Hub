@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140324190329) do
   create_table "posts", force: true do |t|
     t.integer  "user_id"
     t.string   "title"
-    t.string   "text"
+    t.text     "text"
     t.integer  "weight_score"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140324190329) do
   create_table "reviews", force: true do |t|
     t.integer  "post_id"
     t.string   "title"
-    t.string   "text"
+    t.text     "text"
     t.integer  "score"
     t.integer  "user_id"
     t.datetime "created_at"
