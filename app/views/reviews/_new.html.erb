@@ -1,8 +1,5 @@
 <div class="index">
 
-
-  <!-- add my real review form -->
-
   <h3>Review this Post</h3>
 
 <div class="row">
@@ -19,16 +16,24 @@
         </ul>
       <% end %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+      <div class="small-5">
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
 
       <%= f.label :text %>
-       <%= f.text_area :text, :cols => "30", :rows => "25" %>
+      <%= f.text_area :text, :cols => "30", :rows => "25" %>
 
-      <%= f.label :score %>
-      <%= f.text_field :score %><br>
+      <div class="large-6 columns">
+        <label>Score This Post</label>
+        <input type="radio" name="score" value="1" id="1"><label for="1">1</label>
+        <input type="radio" name="score" value="2" id="2"><label for="2">2</label>
+        <input type="radio" name="score" value="3" id="3"><label for="3">3</label>
+        <input type="radio" name="score" value="4" id="4"><label for="4">4</label>
+        <input type="radio" name="score" value="5" id="5"><label for="5">5</label>
 
-<!-- have to add a hidden value for the post id -->
+      </div>
 
       <%= f.submit "Review", class: "button" %>
     <% end %>
