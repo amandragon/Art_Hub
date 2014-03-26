@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     # binding.pry
   end
   def create
-    new_review=params.require(:review).permit( :title, :text, :score, :user_id, :post_id)
+    new_review=params.require(:review).permit( :title, :text, :score, :post_id)
     @review = Review.create(new_review)
     @review.update_attributes(user_id: current_user.id)
     

@@ -4,22 +4,26 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def landing
+    @posts = Post.all
+  end
+
   def new
     @post = Post.new
     @user_id = params[:id]
   end
 
   def create
-    new_post=params.require(:post).permit( :title, :text, :user_id, :score)
-    @post = Post.create(new_post)
-    render :show
+    new_post=params.require(:post).permit( :title, :text, :score)
+    @post = current_user.posts.create(new_post)
+    redirect_to post_path(@post.id)
   end
 
   def show
     @post = Post.find(params[:id])
 
-  
-    @review = Review.create
+    
+    @review = Review.new
     # binding.pry
     @reviews = Review.where("post_id = ?", params[:id])
     # binding.pry

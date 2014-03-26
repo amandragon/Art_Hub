@@ -1,0 +1,16 @@
+<div class="index">
+
+<h3>Recent Posts</h3>
+
+<% @posts.all do |post| %>
+  <div class="row">
+     <div>
+      <ul>
+      <li><%=@post.title%></li>
+      <li><%=@post.text%></li>
+     </ul>
+
+  </div>
+  </div>
+<% end %>
+</div>

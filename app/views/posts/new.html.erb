@@ -23,8 +23,7 @@
 
       <%= f.label :text %>
       <%= f.text_area :text, :cols => "30", :rows => "25" %>
-
-      <%= f.hidden_field :user_id, :value => @current_user.id %>  
+ 
       <%= f.hidden_field :weight_score, :value=> [] %>    
 
       <%= f.submit "Create", class: "button" %>
