@@ -17,18 +17,18 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
-  
-    @review = Review.create
+    @review = Review.new
     # binding.pry
     @reviews = Review.where("post_id = ?", params[:id])
     # binding.pry
     render :show 
   end
 
-  def score_post
-
-  end
+  # def update
+  #   post = Post.find(params[:id])
+  #   post.update_attributes(params[:post, :av_score])
+  #   render :json => @post
+  # end
 
   def destroy
     post = Post.find(params[:id])

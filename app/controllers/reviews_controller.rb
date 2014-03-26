@@ -4,6 +4,8 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = Review.all
+
+    render :json => @reviews
   end
   def new
     @review = Review.new
@@ -11,6 +13,16 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
     # binding.pry
   end
+
+  def update
+    new_review=params.require(:review).permit( :title, :text, :score, :user_id, :post_id)
+    review = Review.find(params[:id])
+    review.update_attributes(params[:review])
+    render :json => @review
+    # binding.pry
+
+  end
+
   def create
     new_review=params.require(:review).permit( :title, :text, :score, :user_id, :post_id)
     @review = Review.create(new_review)

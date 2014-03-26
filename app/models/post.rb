@@ -5,4 +5,8 @@ class Post < ActiveRecord::Base
     where(user_id: user.id)
   end
 
+  def self.av_score_with reviews
+    
+  end
+
 end
