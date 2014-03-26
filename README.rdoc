@@ -32,7 +32,8 @@ Nice to Haves:
 
 
 Gems So Far:
-*HandleBars
+* HandleBars
+* JQuery
 
 
 
