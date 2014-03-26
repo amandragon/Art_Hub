@@ -2,15 +2,14 @@
 
 <h3>Recent Posts</h3>
 
-<% @posts.all do |post| %>
+<% @posts.each do |post| %>
   <div class="row">
      <div>
-      <ul>
-      <li><%=@post.title%></li>
-      <li><%=@post.text%></li>
-     </ul>
-
-  </div>
+      <dl>
+      <dd><a href="<%=post_path(post)%>"><%=post.title%></a></dd>
+      <dd><%=post.text%></dd>
+     </dl>
+    </div>
   </div>
 <% end %>
 </div>
