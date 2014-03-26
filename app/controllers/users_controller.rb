@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    new_user = params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    new_user = params.require(:user).permit(:name, :email, :password, :password_confirmation, :about_me)
     @user=User.new(new_user)
     if @user.save
       flash[:success] = "Welcome to ArtHub!"

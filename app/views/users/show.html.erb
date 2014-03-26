@@ -10,6 +10,9 @@
       <h3>Email:</h3>
       <p><%= @user.email %></p><br>
 
+      <h3>About <%=@user.name%>:</h3>
+      <p><%= @user.about_me %></p><br>
+
 
   <h3>Work by this user </h3>
     <% @posts_by_user.each do |post| %>
@@ -28,12 +31,12 @@
       </aside>
       </div>
 
-  <h3>Reviews by this user </h3>
+  <h3>Reviews by this User</h3>
     <% @reviews_by_user.each do |review| %>
       <div class="row">
         <div class="span3 offset1">
           <ul>
-            <li><a href="<%=review_path(review)%>"><%=review.title%></a></li>
+            <li><a href="<%=post_path(review.post_id)%>"><%=review.title%></a></li>
           </ul>
         </div>
       </div>

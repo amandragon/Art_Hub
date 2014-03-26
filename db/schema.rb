@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140324190329) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.text     "about_me"
     t.string   "remember_token"
     t.integer  "av_score"
     t.datetime "created_at"
