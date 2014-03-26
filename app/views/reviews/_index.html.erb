@@ -2,19 +2,17 @@
 
 <h3>Reviews of this Post</h3>
 
+<div id="review_list">
 <% @reviews.each do |review| %>
   <div class="row">
-     <div class="span3 offset1">
-     	<dl>
-     	<dt><%=review.title%> (<%=review.score%>)</dt>
+    <div class="span3 offset1">
+      <dl>
+      <dt><%=review.title%> (<%=review.score%>)</dt>
       <dd><%=review.text%></dd>
-
-      <!-- style these -->
-
-
-     </dl>
-
-</div>
+      </dl>
+    </div>
   </div>
 <% end %>
+<div/>
+
 </div>
