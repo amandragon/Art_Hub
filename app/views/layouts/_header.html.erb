@@ -1,21 +1,17 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"></li>
-        <div class="brand">
-          <li><h1>ArtHub</h1></li>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1> ArtHub</h1>
+    </li>
+  </ul>
 
-        </div>
-          <li><%= link_to "My Profile", current_user %></li>
-          <li><%= link_to "New Post", new_post_path %></li>
-          <li><%= link_to "Sign in", signin_path, method: "get"%></li>
-          <li><%= link_to "Sign up", signup_path, method: "get"%></li>
-          <li><%= link_to "Sign out", signout_path, method: "delete"%></li>
-          <li><%= link_to "View Users", users_path, method: "get"%></li>
-
-        
-      </ul>
-
-  </div><!-- /.container-fluid -->
-</nav>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><%= link_to "New Post", new_post_path %></li>
+      <li class="active"><%= link_to "Sign in", signin_path, method: "get"%></li>
+      <li class="active"><%= link_to "Sign up", signup_path, method: "get"%></li>
+      <li class="active"><%= link_to "Sign out", signout_path, method: "delete"%></li>
+      <li class="active"><%= link_to "View Users", users_path, method: "get"%></li>
+      </li>
+    </ul>
