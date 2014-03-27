@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @post.weight_score = @post.average_score
+    @post.update_attributes(:weight_score => @post.average_score)
 
     @review = Review.new
     @reviews = Review.where("post_id = ?", params[:id])

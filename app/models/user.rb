@@ -26,10 +26,17 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  def compute_av_score 
+      a = posts.map{|r| r.weight_score}
+      a.inject{ |sum, el| sum + el }.to_f / a.size
+  end
+
+
 
     private
 
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
+
 end
