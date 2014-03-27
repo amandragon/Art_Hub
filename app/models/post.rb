@@ -7,10 +7,12 @@ class Post < ActiveRecord::Base
     where(user_id: user.id)
   end
 
+
   def average_score 
-    a = reviews.map{|r| r.score}
-    a.inject{ |sum, el| sum + el }.to_f / a.size
+
   end
+
+
 
 
 

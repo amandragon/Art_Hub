@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user.update_attributes(:av_score => @user.compute_av_score)
+    # @user.update_all
+    # @user.update_all
+    # @user.update_attributes(:av_score => @user.avg)
     @posts_by_user = Post.all_posts_by @user
     @reviews_by_user = Review.all_reviews_by @user
   end

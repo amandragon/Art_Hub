@@ -31,6 +31,12 @@ class User < ActiveRecord::Base
       a.inject{ |sum, el| sum + el }.to_f / a.size
   end
 
+  def self.update_all
+    User.all.each do |u|
+      u.update_attributes(:av_score => compute_av_score)
+      u.update_attributes.save
+    end
+  end
 
 
     private
@@ -38,5 +44,4 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
-
 end
