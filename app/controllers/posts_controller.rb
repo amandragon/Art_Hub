@@ -21,17 +21,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @post.weight_score = @post.average_score
 
-    
     @review = Review.new
-    # binding.pry
     @reviews = Review.where("post_id = ?", params[:id])
-    # binding.pry
+
     render :show 
-  end
-
-  def score_post
-
   end
 
   def destroy
