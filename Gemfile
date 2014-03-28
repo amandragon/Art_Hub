@@ -33,8 +33,9 @@ group :doc do
 end
 
 #Use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.1.2'
 # heroku keeps rejecting bcrypt-ruby
+# but local host won't render without it
 
 group :development, :test do
 	gem 'pry'
@@ -44,5 +45,3 @@ end
 gem 'rails_12factor', group: :production
 
 ruby "2.0.0"
-
-gem 'handlebars_assets'

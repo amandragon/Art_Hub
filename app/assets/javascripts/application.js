@@ -18,6 +18,5 @@
 //= require modernizr
 //= require foundation.min
 
-//= require handlebars.runtime
-//= require handlebars
+
 
