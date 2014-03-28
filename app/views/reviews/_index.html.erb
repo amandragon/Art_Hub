@@ -8,6 +8,7 @@
   <div class="row">
     <div class="span3 offset1">
       <dl>
+      <dt><%= image_tag avatar_url(@author) %>  Review uplodaded by <%=@author.name%></dt>
       <dt><%=review.title%> (<%=review.score%>)</dt>
       <dd><%=review.text%></dd>
       </dl>

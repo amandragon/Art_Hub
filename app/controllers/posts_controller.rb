@@ -23,9 +23,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @author= User.find(@post.user_id)
 
-    
-
-
     @review = Review.new
     @reviews = Review.where("post_id = ?", params[:id])
 
