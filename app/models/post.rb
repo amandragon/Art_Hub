@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
     where(user_id: user.id)
   end
 
+<<<<<<< HEAD
 
 private
 
@@ -23,4 +24,10 @@ private
 
 
 
+=======
+  def self.av_score_with reviews
+    
+  end
+
+>>>>>>> a6f2fe6ccb20cf1744c32ae8507287e7f59e8ebc
 end

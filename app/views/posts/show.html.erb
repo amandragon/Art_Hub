@@ -4,15 +4,60 @@
   <h3><%= @post.title %></h3><br>
   <h3><%= @post.weight_score %> </h3><br>
 
-     <div class="col-md-3">
+<div class="col-md-3">
       <p class="text-info"><%= @post.text %></p><br>
 </div>
-
-<%= render :partial => 'reviews/new', locals: {reviews: @reviews} %>
-
 
 <ul class="nav nav-pills">
   <li><%= link_to('Delete Post', @post, :method => :delete, :confirm => 'Are you sure?') %></li>
   <li><%= link_to 'Return to Users', users_path %></li>
 </ul>
+
+
+<div class="index">
+
+
+  <!-- review form -->
+
+<h3>Review this Post</h3>
+<p>(and score it 1-100)</p>
+<div class="row">
+  <div class="span15 offset3">
+    <%= form_for(@review, remote: true) do |f| %>
+      <% unless @review.errors.count == 0   %>
+        <div class="alert alert-error">
+          The form contains <%= pluralize(@review.errors.count, "error") %>.
+        </div>
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li>* <%= msg %></li>
+        <% end %>
+        </ul>
+      <% end %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :text %>
+      <%= f.text_field :text %><br>
+
+      <%= f.label :score %>
+      <%= f.text_field :score %><br>
+
+      <%= f.hidden_field :post_id, :value => @post.id %>  
+      <%= f.hidden_field :user_id, :value=> @current_user.id %>    
+
+      <%= f.submit "Review", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+<!-- list of reviews -->
+<div class="row" id="review_list">
+
+<!-- HandlebarsTemplates['show']('review_list'); -->
+
 </div>
+
+  </div>
+</div>
+
+<!-- end the list of reviews -->
