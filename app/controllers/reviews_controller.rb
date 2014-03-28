@@ -13,20 +13,16 @@ class ReviewsController < ApplicationController
     @reviewee_id = params[:id]
     @reviews = Review.all
   end
-<<<<<<< HEAD
-  
-=======
+
 
   def update
     new_review=params.require(:review).permit( :title, :text, :score, :user_id, :post_id)
     review = Review.find(params[:id])
     review.update_attributes(params[:review])
     render :json => @review
-    # binding.pry
 
   end
 
->>>>>>> a6f2fe6ccb20cf1744c32ae8507287e7f59e8ebc
   def create
     new_review=params.require(:review).permit( :title, :text, :score, :post_id)
     @review = Review.create(new_review)

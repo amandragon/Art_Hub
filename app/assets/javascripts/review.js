@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   console.log('READY!');
-<<<<<<< HEAD
+
 
   $('#new_review').on("ajax:success", function(e,data,status, xhr){
     review = jQuery.parseJSON(xhr.responseText);
@@ -21,7 +21,7 @@ $(document).ready(function() {
     // </div>
 
   }).bind("ajax:error", function(e,data,status, xhr){
-=======
+
   $('#review_list').append(';aksdjf;lkadjsf');
 
   $('#new_review').on("ajax:success", function(e,data,status, xhr){
@@ -29,7 +29,7 @@ $(document).ready(function() {
     $('#review_list').append(xhr.responseText);
 
   }).bind("ajax:error", function(e,data,status,xhr){
->>>>>>> a6f2fe6ccb20cf1744c32ae8507287e7f59e8ebc
+
     console.log('Ajax error');
   });
 

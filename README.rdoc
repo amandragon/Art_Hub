@@ -32,13 +32,9 @@ Nice to Haves:
 
 
 Gems So Far:
-<<<<<<< HEAD
-* Foundation (customized)
-=======
-* HandleBars
-* JQuery
 
->>>>>>> a6f2fe6ccb20cf1744c32ae8507287e7f59e8ebc
+* Foundation (customized)
+* JQuery
 
 
 APIs So Far:
