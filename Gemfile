@@ -33,7 +33,9 @@ group :doc do
 end
 
 #Use ActiveModel has_secure_password
-gem 'bcrypt'
+gem 'bcrypt-ruby'
+# heroku keeps rejecting bcrypt-ruby
+
 group :development, :test do
 	gem 'pry'
 	gem 'pry-rails'
