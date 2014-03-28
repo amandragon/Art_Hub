@@ -5,3 +5,4 @@ class Post < ActiveRecord::Base
   def self.all_posts_by user
     where(user_id: user.id)
   end
+end

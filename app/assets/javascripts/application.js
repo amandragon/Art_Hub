@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require_tree ./templates
 //= require_tree .
-<<<<<<< HEAD
+
 //= require modernizr
 //= require foundation.min
-=======
+
 //= require handlebars.runtime
 //= require handlebars
->>>>>>> a6f2fe6ccb20cf1744c32ae8507287e7f59e8ebc
+

@@ -29,11 +29,6 @@ class PostsController < ApplicationController
     render :show 
   end
 
-    @review = Review.new
-    @reviews = Review.where("post_id = ?", params[:id])
-    render :show 
-  end
-
 
   def destroy
     post = Post.find(params[:id])
