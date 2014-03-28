@@ -16,10 +16,15 @@ private
     a = post.reviews.map{|r| r.score}
     avg = a.inject{ |sum, el| sum + el }.to_f / a.size
     post.update_attributes(:weight_score => avg)
-    # binding.pry
-    #get the most recent review
-    #average it and the other reviews into the post.weight_score
-    #save this immediately after create
+
+    user = User.find(post.user_id)
+    a = user.posts.map{|r| r.weight_score}
+    avg = 3.0;
+    unless a.nil?
+      a.compact!
+      avg = a.inject{ |sum, el| sum + el }.to_f / a.size
+    end  
+    user.update_attributes(:av_score => avg)
   end
 
 
