@@ -2,7 +2,8 @@
   <aside class="span4">
     <section>
       <div class="show_header">
-      <h3><%= @user.name %>'s Page</h3><br>
+      <h3><%= @user.name %>'s Page</h3>
+      <h3>ArtHub Score: <%= @user.av_score %></h3> <br>
     </div>
 
     <div class="show">
@@ -12,9 +13,6 @@
 
       <h3>Email:</h3>
       <p><%= @user.email %></p><br>
-
-      <h3>ArtHub Score:</h3>
-      <h3><%= @user.av_score %> </h3><br>
 
       <h3>About <%=@user.name%>:</h3>
       <p><%= @user.about_me %></p><br>
