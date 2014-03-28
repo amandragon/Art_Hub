@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
   
   def show
     @review = Review.find(params[:id])
-    @author= User.find(@review.author_id)
+    @author= User.find(@review.user_id)
 
     render :show
     

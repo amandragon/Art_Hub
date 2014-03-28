@@ -1,22 +1,25 @@
 
 <div class="index">
 
+<h1>Welcome to the ArtHub Community!</h1>
+<p>ArtHub is a new community of writers who want to see how they stack up. Join today, post your work, and get reviewed and scored by other writers like you.</p>
+
 <h3>Sign in</h3>
-</div>
 
-<div class="row">
-  <div class="small-5">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="row">
+    <div class="small-5">
+      <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email%>
+        <%= f.label :email %>
+        <%= f.text_field :email%>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
 
-      <%= f.submit "Sign in", class: "button" %>
-    <% end %>
+        <%= f.submit "Sign in", class: "button" %>
+      <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    </div>
   </div>
 </div>

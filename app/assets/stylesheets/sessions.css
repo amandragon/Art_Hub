@@ -1,5 +1,13 @@
+h1 {
 
+font-family: 'Nothing You Could Do', cursive;
+font-size: 30px;
+}
 
 .index {
-	padding-left: 10px;
+	padding-left: 30px;
+}
+
+.new {
+  padding-left: 30px;
 }

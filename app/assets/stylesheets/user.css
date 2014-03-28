@@ -2,7 +2,7 @@
 }
 
 .show {
-	padding-left: 10px;
+	padding-left: 30px;
 }
 
 .show_header {
@@ -14,12 +14,12 @@
 }
 
 .index {
-	padding-left: 10px;
+  padding-left: 30px;
 }
 
 h3 {
 font-family: 'Nothing You Could Do', cursive;
-
+font-size: 30px;
 }
 
 .gravatar {
