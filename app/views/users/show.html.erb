@@ -2,13 +2,13 @@
   <aside class="span4">
     <section>
       <div class="show_header">
-      <h2><%= @user.name %>'s Page</h2><br>
+      <h3><%= @user.name %>'s Page</h3><br>
     </div>
 
     <div class="show">
 
 
-<div><%= image_tag avatar_url(@user) %></div>
+<div class = "gravatar"><%= image_tag avatar_url(@user) %></div>
 
       <h3>Email:</h3>
       <p><%= @user.email %></p><br>
